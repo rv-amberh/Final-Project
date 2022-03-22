@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+:root {
+  --primary-color: #f60f20;
+}
+
+* {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+}
+
+html, 
+body {
+  font-family: 'Oswald', sans-serif;
+  color: #111;
+  max-width: 100%;
+}
+
+html {
+   background: url("https://assets.codepen.io/7067207/Home+page+Backgground.png") no-repeat center center fixed;
+  background-size: cover;
+  overflow: auto;
+}
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  background: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  padding: 10px 30px;
+  margin: 20px 0;
+  }
+
+.btn:hover {
+  transform: scale (.98);
+  background: green;
+}
+
+.logo {
+  position: absolute;
+  top: 50px;
+  left: 40px;
+  font-size: 2rem;
+  font-weight: 700;
+  z-index: 40;
+  text-decoration: overline var(--primary-color);
+}
+
+/*Toggle*/
+
+.toggle {
+  position: fixed;
+  top: 0;
+  right:0;
+  width: 60px;
+  height: 60px;
+  background: var(--primary-color) url(https://assets.codepen.io/7067207/menu_1.png);
+  z-index: 30;
+  background-size: 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.toggle.active {
+  background: var(--primary-color) url(https://assets.codepen.io/7067207/close.png);
+  z-index: 30; 
+  background-size: 25px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 27;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+
+.navigation.active {
+  left: 0;
+}
+
+.navigation ul {
+  position: relative;
+}
+
+.navigation ul li {
+  position: relative;
+  list-style: none;
+  text-align: center;
+}
+
+.navigation ul li a {
+  font-size: 2.2rem;
+  color: #111;
+  text-decoration: none;
+  font-weight: 300;
+}
+
+.navigation ul li a:hover {
+  color: var(--primary-color);
+}
+
+.navigation .social-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+/* Section */
+
+.home-img {
+  position:absolute;
+  bottom:0;
+  right: 0;
+  height: 110%;
+ }
+
+.home-content {
+  z-index: 11;
+  max-width: 650px;
+  position: absolute;
+  padding: 0 0px;
+  top: 250px;
+}
+
+h1 {
+  position: absolute;
+  top: 130px;
+  left: 60px;
+  font-size: 40px;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+
+.title p {
+  position: absolute;
+  font-size: 1.1rem;
+  top: 200px;
+  left: 65px;
+  width: 40%;
+}
+
+
+.mainFooter {
+  position: fixed;
+  background: black;
+  color: grey;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+}
+
+
+
+/* Checkbox */
+
+
+#filter-input-wrapper {
+      position: absolute;
+      top: 350px;
+      left: 150px;
+      .input-block {
+            padding: 10px;
+            input[type="checkbox"] {
+                  -ms-transform: scale(1.3);
+                  -moz-transform: scale(1.3);
+                  -webkit-transform: scale(1.3);
+                  -o-transform: scale(1.3);
+                  transform: scale(1.3);
+                  padding: 10px;
+            }
+            label {
+                  font-size: 1.2rem;
+            }
+      }
+}
+
+/* Services Page */
+
+
+* Product Cards */
+
+
+.featured {
+  position: absolute;
+  left: 5%;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111;
+  text-decoration: overline var(--primary-color);
+  bottom: 20px;
+}
+
+
+
+#products{
+	display: grid;
+ grid-template-columns: repeat(3, 300px);
+  margin-left: 170px;
+  margin-top: 400px;
+	grid-gap: 50px;
+	max-width: 250px;
+  padding: 60px;
+  margin-bottom: 30px;
+
+}
+
+.product{
+	padding: 30px;
+	box-shadow: 0 20px 20px rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5%;
+}
+
+.product img{
+	width: 100%;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.7);
+	display: block;
+  border-radius: 5%;
+}
+
+.product .data-title{
+	text-align: center;
+	padding-top: 30px;
+	padding-bottom: 20px;
+	font-weight: 600;
+	text-transform: uppercase;
+   color: #111;
+}
+
+.product .data-description{
+  color: #111;
+	padding: 0 20px 20px 20px;	
+	line-height: 22px;
+  text-align: center;
+}
+
+.product .data-price{
+ text-align: center;
+  color: var(--primary-color)
+}
+
+
+
+
+
+/*Currency Converter*/
+
+.information.active {
+  position: absolute;
+  top: 1000px;
+  width: 200%;
+  height: 135%;
+  background-color: #fff;
+  z-index: 25;
+  display:block;
+  
+}
+
+.information {
+display:none;
+}
+
+.fired {
+  position: absolute;
+  top: 0;
+  z-index: 70; 
+  left: 100px;
+  background: var(--primary-color);
+  border-radius: 30px;
+  padding: 10px 20px;
+  color: white;
+  font-family: 'Oswald', sans-serif;
+  border: none;
+  width: 100px;
+}
+
+.fired:hover {
+  position: absolute;
+  z-index: 70; 
+  left: 100px;
+  background: green;
+  border-radius: 30px;
+  padding: 10px 20px;
+  color: white;
+  font-family: 'Oswald', sans-serif;
+  border: none;
+  margin: 30px;
+}
+
+.fired.active {
+  z-index: 70; 
+}
+
+
+
+/*Media Queries*/
+
+@media (max-width: 800px) {
+    .home-img {
+     display: none;
+  }
+
+    section {
+      padding: 100px 40px;
+    }
+    .navigation ul li a {
+      font-size: 2rem;
+    }
+
+    .products {
+      grid-template-columns: repeat(1, 300px);
+    }
+    .fired {
+    position: relative;
+    z-index: 70; 
+    left: 10px;
+    background: var(--primary-color);
+    border-radius: 30px;
+    padding: 5px 10px;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    border: none;
+    bottom: 110px;
+  }
+ 
+    .fired:hover {
+     position: relative;
+    z-index: 70; 
+    left: 10px;
+    background: green;
+    border-radius: 30px;
+    padding: 5px 10px;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    border: none;
+    bottom: 110px;
+  }
+     .logo {
+    position: absolute;
+    top: 50px;
+    left: 40px;
+    font-size: 2rem;
+    font-weight: 700;
+    z-index: 40;
+    text-decoration: overline var(--primary-color);
+            }
+}
+
+

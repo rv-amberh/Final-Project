@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+ <head>
+    <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+	 <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+	  <link rel="stylesheet" href="search.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
+        <script src="search.js" defer></script>  
+  </head>
+  
+
+  <body>
+    <header>
+        <div class="logo"> Well Fed Artist Co.
+        </div>
+        
+        <div class="toggle"></div>
+        
+        <div class="navigation">
+          <ul>
+            <li><a href="https://picsum.photos/200">Home</a></li>
+            <li><a href="https://picsum.photos/200">Art</a></li>
+            <li><a href="https://picsum.photos/200">Contact</a></li>
+            <li><a href="https://picsum.photos/200">About Me</a></li>
+            <li><a href="https://picsum.photos/200">Search</a></li>
+          </ul> 
+      
+    <div class="social-bar">
+           <ul>
+             <li>
+               <a href="https://facebook.com">
+                 <img src="https://assets.codepen.io/7067207/instagram.png" target="_blank" alt="" />
+               </a>
+             </li>
+             <li>
+               <a href="https://twitter.com">
+                 <img src="https://assets.codepen.io/7067207/instagram.png" target="_blank" alt="" />
+               </a>
+             </li>
+             <li>
+               <a href="https://instagram.com">
+                 <img src="https://assets.codepen.io/7067207/instagram.png" target="_blank" alt="" />
+               </a>
+             </li>
+           </ul>
+     </div>
+        </div>
+   </header>
+   
+ 
+   <div class="row" id="search">
+     <form id="search-form" action="" method="POST" enctype="multipart/form-data">
+       <div class="form-group col-xs-9">
+         <input class="form-control" type="text" placeholder="Search" />
+       </div>
+       <div class="form-group col-xs-3">
+         <button type="submit" class="btn btn-block btn-primary">Search</button>
+       </div>
+     </form>
+   </div>
+   <div class="row" id="filter">
+     <form>
+       <div class="form-group col-sm-3 col-xs-6">
+         <select data-filter="make" class="filter-make filter form-control">
+           <option value="">Select Make</option>
+           <option value="">Show All</option>
+         </select>
+       </div>
+       <div class="form-group col-sm-3 col-xs-6">
+         <select data-filter="type" class="filter-type filter form-control">
+           <option value="">Select Type</option>
+           <option value="">Show All</option>
+         </select>
+       </div>
+       <div class="form-group col-sm-3 col-xs-6">
+         <select data-filter="price" class="filter-price filter form-control">
+           <option value="">Price Range</option>
+           <option value="">Show All</option>
+         </select>
+       </div>
+     </form>
+   </div>
+   <div class="row" id="products">
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+     <div class="mainFooter"> 
+       <footer> Copryright 2021</footer> 
+     </div>
+  </body>	
+ </html>

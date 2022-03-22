@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+:root {
+  --primary-color: #f60f20;
+}
+
+* {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+}
+
+html, 
+body {
+  font-family: 'Oswald', sans-serif;
+  color: #111;
+  max-width: 100%;
+}
+
+body{
+  background: none;
+  overflow: hidden;
+}
+
+
+
+html {
+  background: url("https://assets.codepen.io/7067207/Home+page+Backgground.png") no-repeat center center fixed;
+  background-size: cover;
+  overflow: auto;
+}
+
+section {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+}
+
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  background: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  padding: 20px;
+  height: 2rem;
+  line-height: 2.8px;
+  }
+
+.btn:hover {
+  transform: scale (.98);
+  background: green;
+}
+
+.logo {
+  position: fixed;
+  top: 50px;
+  color: #111;
+  left: 40px;
+  font-size: 2rem;
+  font-weight: 700;
+  z-index: 28;
+  text-decoration: overline var(--primary-color);
+}
+
+/*Toggle*/
+
+.toggle {
+  position: fixed;
+  top: 0;
+  right:0;
+  width: 3rem;
+  height: 3rem;
+  background: var(--primary-color) url(https://assets.codepen.io/7067207/menu_1.png);
+  z-index: 30;
+  background-size: 1rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.toggle.active {
+  background: var(--primary-color) url(https://assets.codepen.io/7067207/close.png);
+  z-index: 30; 
+  background-size: 25px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 27;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+
+.navigation.active {
+  left: 0;
+}
+
+.navigation ul {
+  position: relative;
+}
+
+.navigation ul li {
+  position: relative;
+  list-style: none;
+  text-align: center;
+}
+
+.navigation ul li a {
+  font-size: 2.2rem;
+  color: #111;
+  text-decoration: none;
+  font-weight: 300;
+}
+
+.navigation ul li a:hover {
+  color: var(--primary-color);
+}
+
+.navigation .social-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+
+/* Styling the area of the slides */
+#slideshow {
+  overflow: hidden;
+  height: 600px;
+  width: 600px;
+  position: absolute;
+  left: 900px;
+  top:100px;
+  border: 10px solid rgba(0,0,2,0.3);
+  border-radius: 49% ;
+}
+ 
+/* Style each of the sides
+with a fixed width and height */
+.slide {
+  float: left;
+  height: 510px;
+  width: 728px;
+}
+ 
+/* Add animation to the slides */
+.slide-wrapper {
+   
+/* Calculate the total width on the
+  basis of number of slides */
+  width: calc(728px * 4);
+ 
+/* Specify the animation with the
+  duration and speed */
+  animation: slide 20s ease infinite;
+}
+ 
+
+/* Define the animation
+for the slideshow */
+@keyframes slide {
+   
+  
+/* Calculate the margin-left for
+  each of the slides */
+  20% {
+    margin-left: 0px;
+  }
+ 
+  40% {
+    margin-left: calc(-728px * 1);
+  }
+ 
+  60% {
+    margin-left: calc(-728px * 2);
+  }
+ 
+  80% {
+    margin-left: calc(-728px * 3);
+  }
+}
+
+
+
+/* Section */
+
+
+.home-content {
+  z-index: 11;
+  max-width: 100%;
+  position: relative;
+  left: 4rem;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+.home h1{
+  font-size: 50px;
+}
+
+p {
+  margin: 20px 0 10px;
+  font-size: 1.1rem;
+  line-height: 2rem;
+}
+
+
+.mainFooter {
+  position: fixed;
+  background: black;
+  color: grey;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  min-width: 100%;
+}
+
+
+/* Product Cards */
+
+
+.featured {
+  position: absolute;
+  left: 5%;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111;
+  text-decoration: overline green;
+  bottom: 20px;
+}
+
+
+
+h2{
+	text-align: center;
+	margin-top: 50px;
+	font-size: 30px;
+}
+
+.products{
+	display: grid;
+  grid-template-columns: repeat(3, 350px);
+  margin-left: 170px;
+	grid-gap: 50px;
+	max-width: 250px;
+  padding: 60px;
+}
+
+.product{
+	padding: 10px;
+  background-color: rgba(255, 255, 255, 0.6);
+	box-shadow: 0 20px 20px rgba(0, 0, 0, 0.5);
+  border-radius: 5%;
+}
+
+.product:hover {
+  transform: scale (.98);
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 40px 40px rgba(0, 0, 0, 0.8);
+}
+
+
+
+
+.product img{
+	width: 100%;
+  height: 400px;
+  margin-top: 20px;
+	display: block;
+  border: 5px solid rgba(0, 0, 0, 0.5);
+  border-radius: 5%;
+}
+
+.product .title{
+	text-align: center;
+	padding-top: 30px;
+	padding-bottom: 20px;
+	font-weight: 600;
+	text-transform: uppercase;
+   color: #111;
+}
+
+.product .description{
+  color: #111;
+	padding: 0 20px 20px 20px;	
+	line-height: 22px;
+  text-align: center;
+}
+
+.product .price{
+ text-align: center;
+  color: var(--primary-color)
+}
+
+
+
+
+.product:hover .title{
+	text-align: center;
+	padding-top: 30px;
+	padding-bottom: 20px;
+	font-weight: 600;
+	text-transform: uppercase;
+   color: #FFF;
+}
+
+.product:hover .description{
+  color: #FFF;
+}
+
+.product:hover .price{
+font-size: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Media Queries*/
+
+@media (max-width: 800px) {
+  .home-img {
+  position: absolute;
+  height: 40%;
+ }
+  .logo {
+    top: 20px;
+    left: 40px;
+    font-size: 22px;
+  }
+  
+  .navigation ul li a {
+    font-size: 2rem;
+  }
+  
+  .home-content h1, h2, p {
+    position: relative;
+    color: black;
+    top: 0;
+    margin-right: 40px;
+  }
+  .home-content h1  {
+    position: relative;
+    color: red;
+    top: 0;
+  }
+  
+  .featured {
+  position: relative;
+   top: 12%;
+   position: relative;
+   display: grid;
+   width: 500px;
+   left: 5%;
+ }
+
+.f-items {
+  position: relative;
+  display: grid;
+  width: 250px;
+  left: 5%;
+  gap: 5%;
+}
+
+
+#featured-title {
+   position: absolute;
+   padding: 0;
+   left: 1rem;
+   margin-bottom: 7%;
+   font-size: 3rem;
+   border-bottom: groove red;
+   width: 50%;
+   max-width: 100%;
+}
+
+}

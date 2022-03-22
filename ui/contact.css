@@ -1,0 +1,435 @@
+/*Base*/
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+:root {
+  --primary-color: #f60f20;
+}
+
+* {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+}
+
+html, 
+body {
+  font-family: 'Oswald', sans-serif;
+  color: #111;
+  height: 160%;
+  max-width: 100%;
+}
+
+body{
+  background: none;
+}
+
+html {
+  background: url("https://assets.codepen.io/7067207/Home+page+Backgground+2.png") no-repeat center center fixed;
+  background-size: cover;
+  overflow: auto;
+}
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  background: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  padding: 10px 30px;
+  margin: 20px 0;
+  }
+
+.btn:hover {
+  transform: scale (.98);
+  background: green;
+}
+
+.logo {
+  position: absolute;
+  top: 50px;
+  left: 40px;
+  font-size: 2rem;
+  font-weight: 700;
+  z-index: 28;
+  text-decoration: overline var(--primary-color);
+}
+
+/*Toggle and Navigation*/
+
+.toggle {
+  position: fixed;
+  top: 0;
+  right:0;
+  width: 60px;
+  height: 60px;
+  background: var(--primary-color) url(https://assets.codepen.io/7067207/menu_1.png);
+  z-index: 30;
+  background-size: 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.toggle.active {
+  background: var(--primary-color) url(https://assets.codepen.io/7067207/close.png);
+  z-index: 30; 
+  background-size: 25px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 27;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+
+.navigation.active {
+  left: 0;
+}
+
+.navigation ul {
+  position: relative;
+}
+
+.navigation ul li {
+  position: relative;
+  list-style: none;
+  text-align: center;
+}
+
+.navigation ul li a {
+  font-size: 2.2rem;
+  color: #111;
+  text-decoration: none;
+  font-weight: 300;
+}
+
+.navigation ul li a:hover {
+  color: var(--primary-color);
+}
+
+.navigation .social-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+/* Section */
+
+.home-img {
+  position:absolute;
+  bottom:0;
+  right: 0;
+  height: 110%;
+ }
+
+.home-content {
+  z-index: 11;
+  max-width: 650px;
+  position: absolute;
+  padding: 0 0px;
+  top: 250px;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+
+p {
+  margin: 20px 0 10px;
+  font-size: 1.1rem;
+  width: 200px;
+}
+
+
+.mainFooter {
+  position: fixed;
+  background: black;
+  color: grey;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Contact Form */
+
+.section-main {
+  position: absolute;
+  top: 300px;
+  left: 150px;
+  display: grid;
+  grid-template-columns: repeat(2, 3fr);
+}
+
+.title {
+  position: relative;
+  right: 100px;
+}
+
+.title h1,p {
+   width: 100%;
+}
+
+.selections {
+  position: relative;
+  padding: 0;
+  left: 50px;
+  bottom: 120px;
+  margin-top: 30px;
+  color: white;
+}
+
+/* Dropdown Button */
+.dropbtn {
+  position: relative;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 8px;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 300;
+  border: 0;
+  cursor: pointer;
+  width: 200px;
+  font-family: 'Oswald', sans-serif;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  left: 50px;
+  bottom: 80px;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+ 
+/* Contact form continued..*/
+
+.contact-form {
+  position: relative;
+  background: rgba(3,3,3,0.7);
+  border-radius: 30px;
+  width: 500px;
+  left: 30px;
+  margin-right: 80px;
+  height: 100%;
+}
+
+.contact-form:hover {
+  position: relative;
+  background: rgba(100,150,50,0.7);
+  border-radius: 30px;
+  width: 500px;
+  margin-right: 80px;
+  box-shadow: 0 60px 80px rgba(3,3,3,0.3);
+}
+
+
+.contact-form .row {
+  width: 100%;
+  display: flex;
+  padding: 8px;
+}
+
+.contact-form .input50 {
+  width: 50%;
+  margin: 0 10px;
+}
+
+.contact-form .input100 {
+ width: 100%;
+ margin:  10px;
+}
+
+.contact-form .row input, .contact-form .row textarea {
+ position:relative;
+ border: 1px solid rgba(0,0,0,0.2);
+ color: #111;
+ background: white;
+ width: 100%;
+ outline: none;
+ font-size: 1rem;
+ font-weight: 300;
+ margin: 10px 0;
+ resize: none;  
+ border-radius: 30px;
+ padding: 10px 10px;
+}
+
+.contact-form .row textarea {
+  height: 150px;
+}
+
+.contact-form .row input[type='submit'] {
+  background-color: white;
+  color: var(--primary-color);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 300;
+  border: 0;
+  cursor: pointer;
+  width: 130px;
+  left: 180px;
+  top: 119px;
+  margin-bottom: 5px;
+  font-family: 'Oswald', sans-serif;
+}
+
+/*Media Queries*/
+
+@media (max-width: 800px) {
+ .section-main {
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(1, 600px);
+}
+
+.title {
+  position: relative;
+  right: 100px;
+  bottom: 170px;
+}
+
+.title h1,p {
+   width: 350px;
+}
+
+.contact-form {
+  position: relative;
+  background: rgba(3,3,3,0.7);
+  border-radius: 30px;
+  width: 300px;
+  height: 500px;
+  left: -105px;
+  bottom: 150px;
+  }
+  
+ .contact-form:hover {
+  position: relative;
+  background: rgba(100,150,50,0.7);
+  border-radius: 30px;
+  width: 300px;
+  margin-right: 80px;
+  box-shadow: 0 60px 80px rgba(3,3,3,0.3);
+}
+
+ 
+.contact-form .row {
+  width: 100%;
+  display: flex;
+  padding: 4px;
+}
+
+.contact-form .input50 {
+  width: 50%;
+  margin: 0 10px;
+}
+
+.contact-form .input100 {
+ width: 100%;
+}
+
+.contact-form .row input, .contact-form .row textarea {
+ position:relative;
+ border: 1px solid rgba(0,0,0,0.2);
+ color: #111;
+ background: white;
+ width: 100%;
+ outline: none;
+ font-size: 1rem;
+ font-weight: 300;
+ margin: 10px 0;
+ resize: none;  
+ border-radius: 30px;
+ padding: 8px 8px;
+}
+
+.contact-form .row textarea {
+  height: 150px;
+}
+
+.contact-form .row input[type='submit'] {
+  position: relative;
+  background-color: white;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 300;
+  border: 0;
+  cursor: pointer;
+  width: 80px;
+  left: 100px;
+  top: 100px;
+  margin-bottom: 5px;
+  font-family: 'Oswald', sans-serif;
+  padding: 10px;
+}
+ 
+.dropbtn {
+  position: relative;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 8px;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 300;
+  border: 0;
+  cursor: pointer;
+  width: 200px;
+  bottom: 20px;
+ }
+  .selections {
+  position: relative;
+  padding: 0;
+  left: 15px;
+  bottom: 120px;
+  margin-top: 30px;
+  color: white;
+ }
+}

@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+:root {
+  --primary-color: #f60f20;
+}
+
+* {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+}
+
+html, 
+body {
+  font-family: 'Oswald', sans-serif;
+  color: #111;
+}
+
+
+body{
+  background: none;
+}
+
+
+
+html {
+  background-image: url("https://assets.codepen.io/7067207/shutterstock_1249979266+%283%29.jpg");
+ background-size: 100px;
+}
+
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  background: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  padding: 10px 30px;
+  margin: 20px 0;
+  }
+
+.btn:hover {
+  transform: scale (.98);
+  background: green;
+}
+
+.logo {
+  position: absolute;
+  top: 50px;
+  left: 40px;
+  font-size: 2rem;
+  font-weight: 700;
+  z-index: 28;
+  text-decoration: overline var(--primary-color);
+}
+
+/*Toggle*/
+
+.toggle {
+  position: fixed;
+  top: 0;
+  right:0;
+  width: 60px;
+  height: 60px;
+  background: var(--primary-color) url(https://assets.codepen.io/7067207/menu_1.png);
+  z-index: 30;
+  background-size: 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.toggle.active {
+  background: var(--primary-color) url(https://assets.codepen.io/7067207/close.png);
+  z-index: 30; 
+  background-size: 25px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 27;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+
+.navigation.active {
+  left: 0;
+}
+
+.navigation ul {
+  position: relative;
+}
+
+.navigation ul li {
+  position: relative;
+  list-style: none;
+  text-align: center;
+}
+
+.navigation ul li a {
+  font-size: 2.2rem;
+  color: #111;
+  text-decoration: none;
+  font-weight: 300;
+}
+
+.navigation ul li a:hover {
+  color: var(--primary-color);
+}
+
+.navigation .social-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+
+.mainFooter {
+  position: fixed;
+  background: black;
+  color: grey;
+  text-align: center;
+  bottom: 0;
+  width: 150%;
+}
+
+/* Product Detail*/
+
+
+.card-wrapper{
+   position: absolute;
+    max-width: 1100px;
+    display: grid;
+    grid-template-columns: repeat(2, 400px);
+    text-align: left;
+    top: 18%;
+    left: 280px;
+   padding: 100px;
+}
+
+
+img{
+    width: 100%;
+    display: block;
+}
+
+.img-display{
+    overflow: hidden;
+}
+.img-showcase{
+    display: flex;
+    width: 100%;
+    transition: all 0.5s ease;
+}
+
+.img-showcase img{
+    min-width: 100%;
+}
+.img-select{
+    display: flex;
+}
+.img-item{
+    margin: 0.3rem;
+}
+.img-item:nth-child(1),
+.img-item:nth-child(2),
+.img-item:nth-child(3){
+    margin-right: 0;
+}
+.img-item:hover{
+    opacity: 0.8;
+}
+.product-content{
+    padding: 20px;
+    border: 3px solid rgba(0,0,0,0.05);
+    box-shadow: 0 10px 30px rgba(3,3,3,0.3);
+   background-color: rgba(255, 255, 255, 0.8);
+  max-width: 100%;
+  }
+
+.product-content:hover{
+   border: 3px solid transparent;
+  box-shadow: 0 40px 100px rgba(3,0,0,0.3);
+  }
+
+
+.product-title{
+    font-size: 3rem;
+    font-weight: 700;
+    position: relative;
+    color: #12263a;
+    margin: 1rem 0;
+   border-bottom: 5px solid var(--primary-color);
+  
+}
+
+
+.product-link{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    background: #256eff;
+    color: #fff;
+    padding: 0 0.3rem;
+    transition: all 0.5s ease;
+}
+.product-link:hover{
+    opacity: 0.9;
+}
+
+.product-price{
+    margin: 1rem 0;
+    font-size: 1rem;
+    font-weight: 700;
+}
+.product-price span{
+    font-weight: 400;
+}
+
+
+.new-price span{
+    color: red;
+}
+.product-detail h2{
+    text-transform: capitalize;
+    color: #12263a;
+    padding-bottom: 0.6rem;
+}
+.product-detail p{
+    font-size: 0.9rem;
+    padding: 0.3rem;
+    opacity: 0.8;
+}
+.product-detail ul{
+    margin: 1rem 0;
+    font-size: 0.9rem;
+}
+.product-detail ul li{
+    margin: 0;
+    list-style: none;
+    background: url(shoes_images/checked.png) left center no-repeat;
+    background-size: 18px;
+    padding-left: 1.7rem;
+    margin: 0.4rem 0;
+    font-weight: 600;
+    opacity: 0.9;
+}
+.product-detail ul li span{
+    font-weight: 400;
+}
+.purchase-info{
+    margin: 1.5rem 0;
+}
+.purchase-info input,
+.purchase-info .btn{
+    border: 1.5px solid #ddd;
+    border-radius: 25px;
+    text-align: center;
+    padding: 0.45rem 0.8rem;
+    outline: 0;
+    margin-right: 0.2rem;
+    margin-bottom: 1rem;
+}
+.purchase-info input{
+    width: 60px;
+}
+.purchase-info .btn{
+    cursor: pointer;
+    color: #fff;
+}
+.purchase-info .btn:first-of-type{
+    background: #256eff;
+}
+.purchase-info .btn:last-of-type{
+    background: #f64749;
+}
+.purchase-info .btn:hover{
+    opacity: 0.9;
+}
+.social-links{
+    display: flex;
+    align-items: center;
+}
+.social-links a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    color: #000;
+    border: 1px solid #000;
+    margin: 0 0.2rem;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: all 0.5s ease;
+}
+.social-links a:hover{
+    background: #000;
+    border-color: transparent;
+    color: #fff;
+}
+
+@media screen and (min-width: 800px){
+    .card{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1.5rem;
+    }
+    .card-wrapper{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .product-imgs{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .product-content{
+        padding-top: 0;
+    }
+
+
+
+
+/*Media Queries*/
+
+@media (max-width: 800px) {
+  .home-img {
+   display: none;
+ }
