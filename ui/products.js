@@ -10,75 +10,6 @@ toggle.addEventListener("click", () => {
   navigation.classList.toggle("active");
 });
 
-// Product Cards //
-
-
-products = [
-  {
-    image: "https://assets.codepen.io/7067207/The+Motherboard.JPG",
-    title: "Product title",
-    description:
-      "Digital Art - Lorem ipsum dolor sit amet consectetur adipisicing, elit. Blanditiis, ducimus.",
-    price: "9,99"
-  },
-  {
-    image: "https://assets.codepen.io/7067207/Relative+Conscious.JPG",
-    title: "Product title",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing, elit. Blanditiis, ducimus.",
-    price: "9,99"
-  },
-  {
-    image: "https://assets.codepen.io/7067207/Relative+Conscious.JPG",
-    title: "Product title",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing, elit. Blanditiis, ducimus.",
-    price: "9,99"
-  },
-  {
-    image: "https://assets.codepen.io/7067207/The+Motherboard.JPG",
-    title: "Product title",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing, elit. Blanditiis, ducimus.",
-    price: "9,99"
-  },
-  {
-    image: "https://assets.codepen.io/7067207/Relative+Conscious.JPG",
-    title: "Product title",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing, elit. Blanditiis, ducimus.",
-    price: "9,99"
-  },
-  {
-    image: "https://assets.codepen.io/7067207/Relative+Conscious.JPG",
-    title: "Product title",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing, elit. Blanditiis, ducimus.",
-    price: "9,99"
-  },
-  {
-    image: "https://assets.codepen.io/7067207/The+Motherboard.JPG",
-    title: "Product title",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing, elit. Blanditiis, ducimus.",
-    price: "9,99"
-  },
-  {
-    image: "https://assets.codepen.io/7067207/Relative+Conscious.JPG",
-    title: "Product title",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing, elit. Blanditiis, ducimus.",
-    price: "9,99"
-  },
-  {
-    image: "https://assets.codepen.io/7067207/Relative+Conscious.JPG",
-    title: "Product title",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing, elit. Blanditiis, ducimus.",
-    price: "9,99"
-  }
-];
-
 /*
     We start our code with an ajax request to fetch the data
 	from the json file.
@@ -106,23 +37,29 @@ products = [
 //let products = JSON.parse(this.responseText);
 
 // next i need an empty variable to add the incoming data.
-let output = "";
+fetch('http://localhost:8000/products')
+        .then(resp => resp.json())
+        .then(data => showProducts(data));
 
-// now i have to loop trough the products, and in every iteration
-// i add an html template to the output variable.
-for (let item of products) {
-  output += `
-				<div class="product">
-					<img src="${item.image}" alt="${item.image}">
-					<p class="data-title">${item.title}</p>
-					<p class="data-description">${item.description}</p>
-				  <p class="data-price">${item.price}</p>
-				</div>
-			`;
-}
-/* and last i target the products container and add the data that the
+function showProducts(products) {
+  let output = "";
+
+  // now i have to loop trough the products, and in every iteration
+  // i add an html template to the output variable.
+  for (let item of products) {
+    output += `
+	<div class="product">
+          <img src="${item.image}" alt="${item.image}">
+          <p class="title">${item.name}</p>
+	  <p class="description">${item.description}</p>
+	  <p class="price">${item.price}</p>
+	</div>
+    `;
+  }
+  /* and last i target the products container and add the data that the
 		output variable holds. */
-document.querySelector("#products").innerHTML = output;
+  document.querySelector("#products").innerHTML = output;
+}
 
 
 
@@ -219,14 +156,17 @@ var filtersObject = {};
 
 function filterProducts() {
   checkboxValues = grabCheckboxValues();
-  
-  $(".product").hide();
-  $(".product").each(function() {
-    var description = $(this).data("description")();
-    checkboxValues.forEach((query) => {
-      if (description.indexOf(query) > -1) {
-        $(this).show();
-      }
+  if (checkboxValues.length == 0) {
+    $(".product").show();
+  } else {
+    $(".product").hide();
+    $(".product").each(function() {
+      var description = $(this).find('.description').prop('innerHTML').toLowerCase();
+      checkboxValues.forEach((query) => {
+        if (description.indexOf(query) > -1) {
+          $(this).show();
+        }
+      });
     });
-  });
+  }
 }
