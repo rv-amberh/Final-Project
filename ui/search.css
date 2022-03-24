@@ -126,6 +126,10 @@ body {
 	grid-template-columns: repeat(3, 300px);
 	top: 250px;
 	left: 190px;
+	grid-gap: 50px;
+    max-width: 250px;
+    padding: 60px;
+    margin-bottom: 30px;
 }
 
 #products.row:before {
@@ -133,24 +137,22 @@ body {
 }
 
 .product {
-	margin-bottom: 30px;
-}
-.product-inner {
-	box-shadow: 0 0 6px var(--primary-color);
-	padding: 10px;
-	text-align: center;
-	line-height: 20px;
-	margin: 5px 10px;
-	background-color: white;
+	padding: 60px;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5%;
 }
 
-#products div .product-inner:hover {
-	box-shadow: 0 0 20px 0 rgba(0,0,0,.5);
-	padding: 10px;
-}
+.product:hover {
+    padding: 30px;
+    box-shadow: 0 60px 60px #111;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5%;
+  }
+
 
 .col-sm-4 {
-    padding: 30px;
+    padding: 60px;
 	padding: 0 20px;
 	max-width: 350px;
 	min-width: 300px;
@@ -160,14 +162,31 @@ body {
 
 
 .product img {
-	margin-bottom: 20px;
-	margin-top: 15px;
-	height: 200px;
-	width: 200px;
-	max-width: 200px;
-	border: 6px solid rgba(400,600,0,.2);
-	border-outline: black;
+	width: 250px;
+    height: 290px;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.7);
+    display: block;
+    border-radius: 5%;
+    position: relative;
+	right: 10px;
 }
+
+.product:hover img {
+	width: 250px;
+    height: 290px;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.7);
+    display: block;
+    border-radius: 5%;
+    position: relative;
+	left: -20px;
+}
+
+.text-center{
+	padding: 20px;
+	color: red;
+}
+
+/*Search Functionality CSS */
 
 .btn-primary {
 	position: relative;

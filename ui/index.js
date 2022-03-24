@@ -67,8 +67,10 @@ function showFeatured(products) {
       for(let item of products.filter(p => p.feature)){
           output += `
               <div class="product">
+              <a href="http://localhost/details.html">
                   <img src="${item.image}" alt="${item.image}">
-                  <p class="title">${item.name}</p>
+                 <p class="title">${item.name}</p>
+                 </a>
                   <p class="description">${item.description}</p>
               <p class="price">${item.price}</p>
               </div>
