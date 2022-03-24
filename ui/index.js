@@ -9,7 +9,7 @@ toggle.addEventListener('click', () => {
   navigation.classList.toggle('active')
 })
 
-//Slideshow//
+//Slideshow functionality//
 
 const slider = document.querySelector(".items");
       const slides = document.querySelectorAll(".item");
@@ -50,6 +50,8 @@ const slider = document.querySelector(".items");
           slides[prev].classList.add("prev");
           slides[next].classList.add("next");
       }
+
+      // Fetching featured products from the database//
 
 fetch('http://localhost:8000/products')
         .then(resp => resp.json())

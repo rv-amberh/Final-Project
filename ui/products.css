@@ -159,13 +159,13 @@ h1 {
 
 .mainFooter {
   position: fixed;
-  height: 50px;
-  background-color: grey;
+  background-color: black;
   bottom: 0px;
   left: 0px;
   right: 0px;
   margin-bottom: 0px;
-  color: white;
+  color: grey;
+  text-align: center;
 }
 
 
@@ -195,67 +195,65 @@ h1 {
 /* Services Page */
 
 
-* Product Cards */
 
-
-.featured {
-  position: absolute;
-  left: 5%;
-  font-size: 2rem;
-  font-weight: 700;
-  color: #111;
-  text-decoration: overline var(--primary-color);
-  bottom: 20px;
-}
-
-
-
-#products{
-	display: grid;
- grid-template-columns: repeat(3, 300px);
-  margin-left: 170px;
+ #products {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  margin-left: 200px;
   margin-top: 400px;
-	grid-gap: 50px;
-	max-width: 250px;
+  grid-gap: 50px;
+  max-width: 250px;
   padding: 60px;
   margin-bottom: 30px;
-
 }
 
-.product{
-	padding: 30px;
-	box-shadow: 0 20px 20px rgba(0, 0, 0, 0.5);
+.product:hover {
+  padding: 30px;
+  box-shadow: 0 60px 60px #111;
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 5%;
 }
 
-.product img{
-	width: 100%;
-  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.7);
-	display: block;
+.product {
+  padding: 30px;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 5%;
 }
 
-.product .title{
-	text-align: center;
-	padding-top: 30px;
-	padding-bottom: 20px;
-	font-weight: 600;
-	text-transform: uppercase;
-   color: #111;
+.product img {
+  width: 250px;
+  height: 290px;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.7);
+  display: block;
+  border-radius: 5%;
 }
 
-.product .description{
-  color: #111;
-	padding: 0 20px 20px 20px;	
-	line-height: 22px;
-  text-align: center;
+.product .title {
+text-align: center;
+padding-top: 30px;
+padding-bottom: 20px;
+font-weight: 600;
+font-size: 20px;
+text-transform: uppercase;
+color: var(--primary-color);
 }
 
-.product .price{
- text-align: center;
-  color: var(--primary-color)
+a:link {
+text-decoration: none;
 }
+.product .description {
+color: #111;
+padding: 0 20px 20px 20px;
+line-height: 22px;
+text-align: center;
+}
+
+.product .price {
+text-align: center;
+color: var(--primary-color);
+}
+
 
 
 

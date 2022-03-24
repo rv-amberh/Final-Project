@@ -22,8 +22,6 @@ body{
   overflow: hidden;
 }
 
-
-
 html {
   background: url("https://assets.codepen.io/7067207/Home+page+Backgground.png") no-repeat center center fixed;
   background-size: cover;
@@ -44,7 +42,7 @@ section {
   color: white;
   text-decoration: none;
   padding: 20px;
-  height: 2rem;
+  height: 20px;
   line-height: 2.8px;
   }
 
@@ -196,7 +194,6 @@ for the slideshow */
 }
 
 
-
 /* Section */
 
 
@@ -247,7 +244,6 @@ p {
   text-decoration: overline green;
   bottom: 20px;
 }
-
 
 
 h2{

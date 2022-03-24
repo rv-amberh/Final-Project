@@ -13,6 +13,8 @@ toggle.addEventListener('click', () => {
 
 function validateForm() {
 
+// Setting variables to grab html elements//
+
 let lastName = document.getElementById("name");
 isNameValid(lastName.value);
 lastName.value = "";
@@ -25,6 +27,11 @@ let phoneNumber = document.getElementById("phoneNumber");
 isPhoneNumberValid(phoneNumber.value);
 phoneNumber.value = "";
 }
+
+//If statement - passing through the string from the form and testing if the position matches//
+
+
+
 
 function isNameValid(str) {
 if (!/^[a-zA-Z ]{2,30}$/.test(str)) {
