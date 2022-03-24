@@ -260,55 +260,6 @@ h1 {
 
 
 
-/*Currency Converter*/
-
-.information.active {
-  position: absolute;
-  top: 1000px;
-  width: 200%;
-  height: 135%;
-  background-color: #fff;
-  z-index: 25;
-  display:block;
-  
-}
-
-.information {
-display:none;
-}
-
-.fired {
-  position: absolute;
-  top: 0;
-  z-index: 70; 
-  left: 100px;
-  background: var(--primary-color);
-  border-radius: 30px;
-  padding: 10px 20px;
-  color: white;
-  font-family: 'Oswald', sans-serif;
-  border: none;
-  width: 100px;
-}
-
-.fired:hover {
-  position: absolute;
-  z-index: 70; 
-  left: 100px;
-  background: green;
-  border-radius: 30px;
-  padding: 10px 20px;
-  color: white;
-  font-family: 'Oswald', sans-serif;
-  border: none;
-  margin: 30px;
-}
-
-.fired.active {
-  z-index: 70; 
-}
-
-
 
 /*Media Queries*/
 

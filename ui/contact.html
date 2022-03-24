@@ -8,52 +8,61 @@
     <script src="contact.js" defer></script>    
     <title>Contact</title>
   </head>
+  
+
   <body>
-      <header>
-       <div class="logo"> Well Fed Artist Co.
-       </div>
-       
-       <div class="toggle"></div>
-       
-       <div class="navigation">
-         <ul>
-           <li><a href="http://localhost/index.html">Home</a></li>
-           <li><a href="http://localhost/products.html">Virtual Gallery</a></li>
-           <li><a href="http://localhost/search.html">Search</a></li>
-           <li><a href="http://localhost/details.html">Explore More</a></li>
-           <li><a href="http://localhost/contact.html">Contact</a></li>
-         </ul>        
-      <div class="social-bar">
+    <header>
+      <div class="logo"> Well Fed Artist Co.
+      </div>
+  
+      <div class="toggle"></div>
+  
+      <div class="navigation">
+        <ul>
+          <li><a href="https://picsum.photos/200">Home</a></li>
+          <li><a href="https://picsum.photos/200">Art</a></li>
+          <li><a href="https://picsum.photos/200">Contact</a></li>
+          <li><a href="https://picsum.photos/200">About Me</a></li>
+          <li><a href="https://picsum.photos/200">Search</a></li>
+        </ul>
+  
+        <div class="social-bar">
           <ul>
             <li>
               <a href="https://facebook.com">
                 <img src="https://assets.codepen.io/7067207/instagram.png" target="_blank" alt="" />
               </a>
             </li>
+            <li>
+              <a href="https://twitter.com">
+                <img src="https://assets.codepen.io/7067207/instagram.png" target="_blank" alt="" />
+              </a>
+            </li>
+            <li>
+              <a href="https://instagram.com">
+                <img src="https://assets.codepen.io/7067207/instagram.png" target="_blank" alt="" />
+              </a>
+            </li>
           </ul>
         </div>
-      </div>
-     </header>
-
- <section>
-      <div class = "section-main">
-      <div class="title">
-        <h1>Contact us</h1>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus
-          iusto molestias accusamus rem nobis est, et laborum harum doloremque
-          nemo non, minima quos totam labore
-        </p>
-      </div>
-     
+    </header>
+  
+    <section>
+      <div class="section-main">
+        <div class="title">
+          <h1>Contact us</h1>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus
+            iusto molestias accusamus rem nobis est, et laborum harum doloremque
+            nemo non, minima quos totam labore
+          </p>
+        </div>
+  
         <div class="contact-form">
           <form onsubmit="return false;" action="">
             <div class="row">
               <div class="input50">
-                <input type="text" placeholder="First Name" id="firstName"/>
-              </div>
-              <div class="input50">
-                <input type="text" placeholder="Last Name" id="lastName"/>
+                <input type="text" placeholder="Name" id="name" />
               </div>
             </div>
             <div class="row">
@@ -74,44 +83,44 @@
                 <input type="submit" value="Send" onclick="validateForm()" />
               </div>
             </div>
-    <div class = "selections"> How did you hear about us? <br>
-   <label class="container">Radio
-     <input type="checkbox" checked="checked">
-      <span class="checkmark"></span>
-    </label>
-
-    <label class="container">Instagram
-      <input type="checkbox">
-      <span class="checkmark"></span>
-    </label>
-
-    <label class="container">Facebook
-      <input type="checkbox">
-      <span class="checkmark"></span>
-    </label>
-
-    <label class="container">Linkedin
-      <input type="checkbox">
-      <span class="checkmark"></span>
-    </label>
-  </div>
-            
-
-                        <div class="dropdown">
-                <button class="dropbtn">Preffered Contact Method</button>
-                 <div class="dropdown-content">
-               <a href="#">Email</a>
-                <a href="#">Phone Number</a>
-               <a href="#">Text Message</a>
+            <div class="selections"> How did you hear about us? <br>
+              <label class="container">Radio
+                <input type="checkbox" checked="checked">
+                <span class="checkmark"></span>
+              </label>
+  
+              <label class="container">Instagram
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+  
+              <label class="container">Facebook
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+  
+              <label class="container">Linkedin
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
             </div>
-          </div>
+  
+            <div class="dropdown">
+              <form>
+                  <input type="radio" id="phone" name="contact" value="phone">
+                  <label for="phone">Phone</label><br>
+                  <input type="radio" id="email" name="contact" value="email">
+                  <label for="email">Email</label><br>
+              </form>
+            </div>
+  
           </form>
         </div>
-        </div>
+      </div>
     </section>
   
- <div class="mainFooter"> 
-      <footer> Copryright 2021</footer> 
-     </div>
-</body>
+    <div class="mainFooter">
+      <footer> Copryright 2021</footer>
+    </div>
+  </body>
 </html>
