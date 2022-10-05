@@ -1,3 +1,4 @@
 # final-project
-
-Amber's final ITA project
+Backend - Go
+Frontend - JavaScript/Axios
+Docker to compile
